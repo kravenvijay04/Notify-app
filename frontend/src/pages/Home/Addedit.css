@@ -1,0 +1,93 @@
+/* Addedit.css */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+.top {
+    font-family: "Assistant", sans-serif;
+}
+
+.addedit-modal {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation for the popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.top1, .top2 {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Labels styling */
+.display1, .display2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    
+}
+
+/* Input field styling */
+.input-addedit {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    outline: none;
+    border: transparent;
+    background-color: #d2e1e4;
+  
+}
+.input-addedit1{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  outline: none;
+  border: transparent;
+  background-color: #d2e1e4;
+
+}
+
+.input-addedit:hover {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styling */
+.btn {
+    background-color: #52aee0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #268da4;
+}

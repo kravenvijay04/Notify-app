@@ -1,0 +1,39 @@
+/* Container for the search bar */
+#box {
+    display: flex;
+    align-items: center;
+    background-color: #efefef; /* Light gray background */
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-left: 25px;
+    width: 20%; /* Adapts to the content size */
+}
+
+/* Search input styling */
+#search {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    padding-right: 8px; /* Space for icons */
+}
+
+/* Clear icon styling */
+#close {
+    color: gray;
+    cursor: pointer;
+    margin-right: 8px; /* Space between icons */
+}
+
+/* Search icon styling */
+#glass {
+    color: gray;
+    cursor: pointer;
+    font-size: 18px; /* Larger size for better visibility */
+}
+
+/* Hover effect for icons */
+#close:hover, #glass:hover {
+    color: #3498db; /* Change color on hover */
+}

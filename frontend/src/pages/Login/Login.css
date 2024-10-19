@@ -1,0 +1,123 @@
+/* Container for the login box */
+#login-box {
+    width: 350px;
+    padding: 30px;
+    padding-right: 50px;
+    background-color: #f5fdf5;
+    /* Soft green background */
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    /* Enhanced shadow */
+    margin: 100px auto;
+    margin-top: 110px;
+    /* Centered on the page */
+    font-family: 'Arial', sans-serif;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#login-box:hover {
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    /* Shadow animation on hover */
+
+}
+
+#login-box h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input:focus {
+    border-color: #68bab9;
+    /* Green border on focus */
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #68bab9;
+    /* Light green button */
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #5db0ae;
+    /* Darker green on hover */
+    transform: translateY(-3px);
+    /* Slight lift on hover */
+}
+
+.Notreg {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
+
+.Notreg a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.Notreg a:hover {
+    color: #3c9c3c;
+    /* Green color on hover */
+    text-decoration: underline;
+}
+
+.info {
+    color: red;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+    #login-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #login-box h3 {
+        font-size: 22px;
+    }
+
+    .input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .Notreg {
+        font-size: 13px;
+    }
+}

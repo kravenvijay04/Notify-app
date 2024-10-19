@@ -1,0 +1,19 @@
+#logout-btn {
+    border: none;
+    background-color: transparent;
+    font-size: medium;
+    color: red;
+    text-decoration: underline;
+}
+
+#box-profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#nameID {
+    background-color: #b0d0e5;
+    padding: 8px;
+    border-radius: 10px;
+}
