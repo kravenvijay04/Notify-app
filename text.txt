@@ -1,1 +1,1 @@
-vijay
+Hey! This repository is for Notify notes app frontend and backend code............. using MERN stack
