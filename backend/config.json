@@ -1,0 +1,3 @@
+{
+    "connectString":"mongodb://notifyDEV:vijay04@notify-shard-00-00.h4y9x.mongodb.net:27017,notify-shard-00-01.h4y9x.mongodb.net:27017,notify-shard-00-02.h4y9x.mongodb.net:27017/?ssl=true&replicaSet=atlas-kjpgo1-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Notify"
+}
