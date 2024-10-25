@@ -10,9 +10,9 @@
     box-sizing: border-box;
 }
 
-/* Title */
+
 .navbar h1 {
-    color: #5db0ae; /* Darker text color for better visibility */
+    color: #5db0ae; 
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -22,7 +22,7 @@
 }
 
 .navbar h1:hover {
-    color: #3498db; /* Color change on hover */
+    color: #3498db; 
 }
 
 /* Links */
@@ -32,7 +32,7 @@
 }
 
 .navbar-links a {
-    color: #555; /* Darker text color for better contrast */
+    color: #555; 
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
@@ -40,10 +40,10 @@
 }
 
 .navbar-links a:hover {
-    color: #3498db; /* Color change on hover for links */
+    color: #3498db; 
 }
 
-/* Responsive design */
+
 @media (max-width: 600px) {
     .navbar {
         flex-direction: column;
@@ -52,7 +52,7 @@
 
     .navbar h1 {
         font-size: 20px;
-        margin-bottom: 10px; /* Space between title and links */
+        margin-bottom: 10px; 
     }
 
     .navbar-links {
