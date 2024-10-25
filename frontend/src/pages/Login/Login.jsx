@@ -1,15 +1,18 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar.jsx";
 import Password from "../../components/input/Password.jsx";
 import { validateEmail } from '../../utils/helper.js';
+import axiosInstance from '../../utils/axiosInstance.js';
 
 const LogIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const navigate =useNavigate()
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -25,6 +28,27 @@ const LogIn = () => {
 
     setError("")
     
+    try{
+      const response = await axiosInstance.post("/login",{
+        email:email,
+        password:password
+      })
+
+      if(response.data && response.data.accessToken){
+        localStorage.setItem("token",response.data.accessToken)
+        navigate('/dashboard')
+      }
+
+    }
+    catch(error){
+      if(error.response && error.response.data && error.response.data.message){
+        setError(error.response.data.message);
+      }
+      else{
+        setError("An unexpected error occured. Please try again");
+      }
+
+    }
   };
 
   return (
