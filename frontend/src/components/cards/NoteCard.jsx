@@ -3,7 +3,7 @@ import React from 'react';
 import { MdOutlinePushPin, MdCreate, MdDelete } from 'react-icons/md';
 import "./NoteCard.css";
 
-// eslint-disable-next-line react/prop-types
+
 const NoteCard = ({ title, content, date, isPinned, onEdit, onDelete, onPinNote }) => {
   return (
     <div className='note-card'>
