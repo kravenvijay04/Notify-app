@@ -1,23 +1,23 @@
-/* Container for the login box */
+
 #login-box {
     width: 350px;
     padding: 30px;
     padding-right: 50px;
     background-color: #f5fdf5;
-    /* Soft green background */
+  
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    /* Enhanced shadow */
+    
     margin: 100px auto;
     margin-top: 110px;
-    /* Centered on the page */
+    
     font-family: 'Arial', sans-serif;
     transition: box-shadow 0.3s ease-in-out;
 }
 
 #login-box:hover {
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
-    /* Shadow animation on hover */
+    
 
 }
 
@@ -42,7 +42,7 @@
 
 .input:focus {
     border-color: #68bab9;
-    /* Green border on focus */
+    
     outline: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -51,7 +51,7 @@
     width: 100%;
     padding: 12px;
     background-color: #68bab9;
-    /* Light green button */
+    
     color: #000;
     border: none;
     border-radius: 6px;
@@ -66,9 +66,9 @@
 
 .login-btn:hover {
     background-color: #5db0ae;
-    /* Darker green on hover */
+   
     transform: translateY(-3px);
-    /* Slight lift on hover */
+    
 }
 
 .Notreg {
@@ -86,7 +86,7 @@
 
 .Notreg a:hover {
     color: #3c9c3c;
-    /* Green color on hover */
+    
     text-decoration: underline;
 }
 
@@ -96,7 +96,6 @@
     margin-left: 5px;
 }
 
-/* Responsive design for mobile */
 @media (max-width: 480px) {
     #login-box {
         width: 90%;
