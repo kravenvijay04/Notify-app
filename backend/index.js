@@ -111,6 +111,23 @@ web.post("/login",async(req,res)=>{
         }
 })
 
+web.get("/get-user",authenticateToken,async(req,res)=>{
+    const {user} = req.user;
+
+    const isUser = await User.findOne({_id:user._id});
+
+    if(!isUser){
+        return res.sendStatus(401);
+    }
+
+    return res.json({
+        user:{  fullname:isUser.fullName,
+                email:isUser.email, 
+                "_id": isUser._id,
+                createdOn:isUser.createdOn},message: "",
+    });
+})
+
 web.post("/add-note",authenticateToken,async(req,res)=>{
     const {title,content}=req.body;
     const {user} = req.user;
@@ -179,6 +196,84 @@ web.post("/edit-note/:noteId",authenticateToken,async(req,res)=>{
     }
 
 })
+
+web.get("/get-all-notes",authenticateToken,async(req,res)=>{
+    const {user} = req.user;
+
+    try{
+        const notes = await Note.find({
+            userId:user._id
+        }).sort({ isPinned:-1});
+
+        return res.json({
+            error:false,
+            notes,
+            message:"All notes retrieved successfully",
+        });
+    }
+    catch(error){
+        return res.status(500).json({
+            error:true,
+            message:"Internal Server Error",
+        });
+    }
+})
+
+web.delete("/delete-note/:noteId",authenticateToken,async(req,res)=>{
+    const noteId = req.params.noteId;
+    const {user} = req.user;
+
+    try{
+        const note = await Note.findOne({_id:noteId,userId:user._id});
+
+        if(!note){
+            return res.status(404).json({error:true,message:"Note not found"});
+        }
+        await Note.deleteOne({ _id:noteId, userId:user._id});
+
+        return res.json({
+            error:false,
+            message:"Note deleted successfully"
+        })
+    }
+    catch(error){
+        return res.status(500).json({
+            error:true,
+            message:"Internal Server Error"
+        })
+    }
+})
+
+web.put("/update-note-pinned/:noteId",authenticateToken,async(req,res)=>{
+    const noteId = req.params.noteId;
+    const {isPinned}=req.body;
+    const {user}=req.user;
+
+    try{
+        const note = await Note.findOne({_id:noteId , userId:user._id});
+        if(!note){
+            return res.status(404).json({error:true,message:"Note not found"});
+        }
+
+        
+        note.isPinned = isPinned;
+
+        await note.save();
+
+        return res.json({
+            error:false,
+            note,
+            message:"Note updated successfully",
+        });
+    }
+    catch(error){
+        return res.status(500).json({
+            error:true,
+            message:"Internal Server Error",
+        });
+    }
+})
+
 
 web.listen(8000);
 
