@@ -1,4 +1,4 @@
-/* Addedit.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
 
 .top {
@@ -17,7 +17,7 @@
     animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Animation for the popup */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -34,7 +34,7 @@
     text-align: left;
 }
 
-/* Labels styling */
+
 .display1, .display2 {
     font-size: 20px;
     font-weight: bold;
@@ -43,7 +43,7 @@
     
 }
 
-/* Input field styling */
+
 .input-addedit {
     width: 100%;
     padding: 10px;
@@ -76,7 +76,7 @@
     outline: none;
 }
 
-/* Button styling */
+
 .btn {
     background-color: #52aee0;
     color: #fff;
