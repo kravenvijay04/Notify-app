@@ -1,4 +1,5 @@
 Hey! This repository is for Notify notes app frontend and backend code............. using MERN stack
 
-frontend is done but the backend is working...
+frontend and backend is done, Now under the work of API integration.
+
 
