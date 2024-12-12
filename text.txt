@@ -2,4 +2,4 @@ Hey! This repository is for Notify notes app frontend and backend code..........
 
 frontend and backend is done, Now under the work of API integration.
 
-
+  
