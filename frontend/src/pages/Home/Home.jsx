@@ -1,12 +1,13 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Home.css";
 import Navbar from '../../components/Navbar/Navbar';
 import NoteCard from '../../components/cards/NoteCard';
 import { MdAdd } from "react-icons/md";
 import Addedit from './Addedit';
 import Modal from "react-modal";
-
+import { useNavigate } from 'react-router-dom';
+import axiosInstance from "../../utils/axiosInstance"
 // Set app element for accessibility
 Modal.setAppElement('#root');
 
@@ -16,6 +17,29 @@ const Home = () => {
     type: "add",
     data: null,
   });
+
+  const [userInfo, setUserInfo] = useState(null);
+
+  const navigate = useNavigate();
+
+  const getUserInfo = async () => {
+    try {
+      const response = await axiosInstance.get("/get-user");
+      if (response.data && response.data.user) {
+        setUserInfo(response.data.user);
+      }
+    } catch (error) {
+      if (error.response.status === 401) {
+        localStorage.clear();
+        navigate("/login");
+      }
+    }
+  };
+
+  useEffect(() => {
+    getUserInfo();
+    return () => { };
+  }, []);
 
   const handleOpenModal = () => {
     setOpenAddEditModal({ isShown: true, type: "add", data: null });
@@ -27,52 +51,52 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar userInfo={userInfo} />
       <div id="container">
-        <NoteCard 
+        <NoteCard
           title="India vs NZ match"
-          date="20th Oct 2024" 
+          date="20th Oct 2024"
           content="India need 10 wickets to win against NZ"
           isPinned={true}
-          onEdit={() => {}}
-          onDelete={() => {}}
-          onPinNote={() => {}}
+          onEdit={() => { }}
+          onDelete={() => { }}
+          onPinNote={() => { }}
         />
-        <NoteCard 
+        <NoteCard
           title="India vs NZ match"
-          date="20th Oct 2024" 
+          date="20th Oct 2024"
           content="India need 10 wickets to win against NZ"
           isPinned={true}
-          onEdit={() => {}}
-          onDelete={() => {}}
-          onPinNote={() => {}}
+          onEdit={() => { }}
+          onDelete={() => { }}
+          onPinNote={() => { }}
         />
-        <NoteCard 
+        <NoteCard
           title="India vs NZ match"
-          date="20th Oct 2024" 
+          date="20th Oct 2024"
           content="India need 10 wickets to win against NZ"
           isPinned={true}
-          onEdit={() => {}}
-          onDelete={() => {}}
-          onPinNote={() => {}}
+          onEdit={() => { }}
+          onDelete={() => { }}
+          onPinNote={() => { }}
         />
-        <NoteCard 
+        <NoteCard
           title="India vs NZ match"
-          date="20th Oct 2024" 
+          date="20th Oct 2024"
           content="India need 10 wickets to win against NZ"
           isPinned={true}
-          onEdit={() => {}}
-          onDelete={() => {}}
-          onPinNote={() => {}}
+          onEdit={() => { }}
+          onDelete={() => { }}
+          onPinNote={() => { }}
         />
-        <NoteCard 
+        <NoteCard
           title="India vs NZ match"
-          date="20th Oct 2024" 
+          date="20th Oct 2024"
           content="India need 10 wickets to win against NZ"
           isPinned={true}
-          onEdit={() => {}}
-          onDelete={() => {}}
-          onPinNote={() => {}}
+          onEdit={() => { }}
+          onDelete={() => { }}
+          onPinNote={() => { }}
         />
       </div>
 
@@ -80,7 +104,7 @@ const Home = () => {
         <MdAdd id="add-icon" />
       </button>
 
-      <Modal 
+      <Modal
         isOpen={openAddEditModal.isShown}
         onRequestClose={handleCloseModal}
         style={{
