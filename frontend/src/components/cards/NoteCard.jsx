@@ -2,6 +2,7 @@
 import React from 'react';
 import { MdOutlinePushPin, MdCreate, MdDelete } from 'react-icons/md';
 import "./NoteCard.css";
+import moment from "moment"
 
 
 const NoteCard = ({ title, content, date, isPinned, onEdit, onDelete, onPinNote }) => {
@@ -10,7 +11,7 @@ const NoteCard = ({ title, content, date, isPinned, onEdit, onDelete, onPinNote 
       <div className='header'>
         <div>
           <h3 className='title'>{title}</h3>
-          <span className='date'>{date}</span>
+          <span className='date'>{moment(date).format('Do MMM YYYY')}</span>
         </div>
         <MdOutlinePushPin 
   className={`icon-btn ${isPinned ? 'text-primary' : 'text-slate-300'}`} 
