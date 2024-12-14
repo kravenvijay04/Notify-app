@@ -1,0 +1,77 @@
+.flare-container {
+    position: absolute;
+    top: 5rem;
+    right: 1.5rem;
+    transition: all 0.4s ease;
+}
+
+.flare-hidden {
+    opacity: 0;
+}
+
+.flare-visible {
+    opacity: 1;
+}
+
+.flare {
+    min-width: 13rem;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.375rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.flare::after {
+    content: '';
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+}
+
+.flare-delete::after {
+    background-color: #ef4444;
+    /* Red */
+}
+
+.flare-success::after {
+    background-color: #22c55e;
+    /* Green */
+}
+
+.flare-icon-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.flare-delete-icon {
+    background-color: #fee2e2;
+    /* Light red background */
+    color: #ef4444;
+    /* Red icon */
+}
+
+.flare-success-icon {
+    background-color: #dcfce7;
+    /* Light green background */
+    color: #22c55e;
+    /* Green icon */
+}
+
+.flare-message {
+    font-size: 0.875rem;
+    color: #1f2937;
+    /* Slate-800 */
+    margin-left: 0.75rem;
+}
