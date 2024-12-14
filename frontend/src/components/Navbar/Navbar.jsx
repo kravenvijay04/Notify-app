@@ -6,11 +6,12 @@ import ProfileInfo from '../cards/profileInfo';
 import { useNavigate } from 'react-router-dom';
 import SearchBar from '../Searchbar/searchBar';
 
-const Navbar = () => {
+const Navbar = ({ userInfo }) => {
     const [searchQuery, setSearchQuery] = useState("");
     const navigate = useNavigate(); // Call useNavigate as a function
 
     const onlogout = () => {
+        localStorage.clear();
         console.log("Logout clicked"); // Add this line to verify if it's triggered
         navigate("/login");
     };
@@ -33,7 +34,7 @@ const Navbar = () => {
                 handleSearch={handleSearch}
                 onClearSearch={onClearSearch}
             />
-            <ProfileInfo onlogout={onlogout} /> {/* Pass the onlogout function as a prop */}
+            <ProfileInfo userInfo={userInfo} onlogout={onlogout} /> {/* Pass the onlogout function as a prop */}
         </div>
     );
 };
