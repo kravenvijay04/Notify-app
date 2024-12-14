@@ -4,10 +4,13 @@ import "./Home.css";
 import Navbar from '../../components/Navbar/Navbar';
 import NoteCard from '../../components/cards/NoteCard';
 import { MdAdd } from "react-icons/md";
+import Flare from '../../components/FlareMessage/Flare';
 import Addedit from './Addedit';
 import Modal from "react-modal";
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from "../../utils/axiosInstance"
+import EmptyCard from '../../components/EmptyCard/EmptyCard';
+
 // Set app element for accessibility
 Modal.setAppElement('#root');
 
@@ -18,9 +21,35 @@ const Home = () => {
     data: null,
   });
 
+  const [showFlareMsg, setShowFlareMsg] = useState({
+    isShown: false,
+    message: "",
+    type: "add"
+  })
+
+  const [allNotes, setAllNotes] = useState([])
   const [userInfo, setUserInfo] = useState(null);
 
   const navigate = useNavigate();
+
+  const handleEdit = (noteDetails) => {
+    setOpenAddEditModal({ isShown: true, data: noteDetails, type: "edit" });
+  };
+
+  // const showFlareMessage = (message, type) => {
+  //   setShowFlareMsg({
+  //     isShown: true,
+  //     message,
+  //     type
+  //   });
+  // };
+
+  const handleCloseFlare = () => {
+    setShowFlareMsg({
+      isShown: false,
+      message: "",
+    });
+  };
 
   const getUserInfo = async () => {
     try {
@@ -36,7 +65,36 @@ const Home = () => {
     }
   };
 
+  const getAllNotes = async () => {
+    try {
+      const response = await axiosInstance.get("/get-all-notes");
+
+      if (response.data && response.data.notes) {
+        setAllNotes(response.data.notes);
+      }
+    } catch (error) {
+      console.log("An unexpected error ocuured. Please try again.")
+    }
+  }
+
+  const deleteNote = async (data) => {
+    const noteId = data._id;
+    try {
+      const response = await axiosInstance.delete("/delete-note/" + noteId);
+
+      if (response.data && !response.data.error) {
+        getAllNotes()
+
+      }
+    } catch (error) {
+      if (error.response && error.response.data && error.response.data.message) {
+        console.log("An unexpected error ocuured. Please try again.")
+      }
+    }
+  }
+
   useEffect(() => {
+    getAllNotes();
     getUserInfo();
     return () => { };
   }, []);
@@ -52,52 +110,26 @@ const Home = () => {
   return (
     <>
       <Navbar userInfo={userInfo} />
-      <div id="container">
-        <NoteCard
-          title="India vs NZ match"
-          date="20th Oct 2024"
-          content="India need 10 wickets to win against NZ"
-          isPinned={true}
-          onEdit={() => { }}
-          onDelete={() => { }}
-          onPinNote={() => { }}
-        />
-        <NoteCard
-          title="India vs NZ match"
-          date="20th Oct 2024"
-          content="India need 10 wickets to win against NZ"
-          isPinned={true}
-          onEdit={() => { }}
-          onDelete={() => { }}
-          onPinNote={() => { }}
-        />
-        <NoteCard
-          title="India vs NZ match"
-          date="20th Oct 2024"
-          content="India need 10 wickets to win against NZ"
-          isPinned={true}
-          onEdit={() => { }}
-          onDelete={() => { }}
-          onPinNote={() => { }}
-        />
-        <NoteCard
-          title="India vs NZ match"
-          date="20th Oct 2024"
-          content="India need 10 wickets to win against NZ"
-          isPinned={true}
-          onEdit={() => { }}
-          onDelete={() => { }}
-          onPinNote={() => { }}
-        />
-        <NoteCard
-          title="India vs NZ match"
-          date="20th Oct 2024"
-          content="India need 10 wickets to win against NZ"
-          isPinned={true}
-          onEdit={() => { }}
-          onDelete={() => { }}
-          onPinNote={() => { }}
-        />
+      <div>
+
+        {allNotes.length > 0 ? (
+          <div id="container">
+            {allNotes.map((item) => (
+              <NoteCard
+                key={item._id}
+                title={item.title}
+                date={item.createdOn}
+                content={item.content}
+                isPinned={item.isPinned}
+                onEdit={() => { handleEdit(item) }}
+                onDelete={() => { deleteNote(item) }}
+                onPinNote={() => { }}
+              />
+            ))}
+          </div>
+        ) : (
+          <EmptyCard/>
+        )}
       </div>
 
       <button className="add" onClick={handleOpenModal}>
@@ -123,8 +155,18 @@ const Home = () => {
         }}
         contentLabel="Add/Edit Note"
       >
-        <Addedit onClose={handleCloseModal} />
+        <Addedit
+          type={openAddEditModal.type}
+          noteData={openAddEditModal.data}
+          onClose={handleCloseModal} getAllNotes={getAllNotes}
+        />
       </Modal>
+
+      <Flare
+        usShown={showFlareMsg.isShown}
+        message={showFlareMsg.message}
+        onClose={handleCloseFlare}
+      />
     </>
   );
 }
