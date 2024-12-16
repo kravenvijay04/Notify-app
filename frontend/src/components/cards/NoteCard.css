@@ -1,84 +1,88 @@
-
 .note-card {
-    background-color: #c7e5ed;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    padding: 20px;
-    max-width: 350px;
-    font-family: 'Arial', sans-serif;
-    transition: transform 0.2s ease;
-  }
-  
-  .note-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
-    margin: 0;
-  }
-  
-  .date {
-    font-size: 12px;
-    color: #2f2e2e;
-  }
-  
-  .content {
-    font-size: 14px;
-    color: #555;
-    margin: 15px 0;
-    line-height: 1.5;
-  }
-  
-  #ons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .onCreate, .onDelete, .onPinNote {
-    font-size: 20px;
-    cursor: pointer;
-    color: #555;
-  }
-  
-  .onCreate:hover, .onDelete:hover {
-    color: #000;
-  }
-  
-  .onDelete {
-    color: #d9534f;
-  }
-  
+  background-color: #c7e5ed;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.436);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  padding: 20px;
+  max-width: 350px;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.note-card:hover {
+  transform: scale(1.05);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.date {
+  font-size: 12px;
+  color: #2f2e2e;
+}
+
+.content {
+  font-size: 14px;
+  color: #555;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+#ons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.onCreate {
+  color: rgb(0, 128, 0);
+}
+
+.onDelete,
+.onPinNote {
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+
+.onCreate:hover,
+.onDelete:hover {
+  color: #000;
+}
+
+.onDelete {
+  color: #d9534f;
+}
+
 .icon-btn {
-    font-size: 20px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
-  .text-primary {
-    color: #007bff;
-  }
-  
 
-  .text-slate-300 {
-    color: #b0b0b0; 
-  }
-  
+.text-primary {
+  color: #007bff;
+}
 
-  .icon-btn:hover {
-    color: #000; 
-  }
-  
-  
+
+.text-slate-300 {
+  color: black;
+}
+
+
+.icon-btn:hover {
+  color: #000;
+}
