@@ -27,14 +27,18 @@ const Navbar = ({ userInfo }) => {
 
     return (
         <div className="navbar">
-            <h1>Notify.v1</h1>
+            <div className='title'>
+                <img src="./images/logo.png" alt="notify logo" className='logo' />
+                <h1>Notify</h1>
+            </div>
+
             <SearchBar
                 value={searchQuery}
                 onChange={({ target }) => setSearchQuery(target.value)}
                 handleSearch={handleSearch}
                 onClearSearch={onClearSearch}
             />
-            <ProfileInfo userInfo={userInfo} onlogout={onlogout} /> {/* Pass the onlogout function as a prop */}
+            <ProfileInfo userInfo={userInfo} onlogout={onlogout} />
         </div>
     );
 };
