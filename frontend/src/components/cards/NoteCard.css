@@ -1,6 +1,6 @@
 .note-card {
   background-color: #c7e5ed;
-  border-radius: 10px;
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.436);
   box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
   padding: 20px;
@@ -21,20 +21,22 @@
 }
 
 .title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
+  font-size: 22px;
+  font-weight: 750;
+  color: black;
   margin: 0;
 }
 
 .date {
   font-size: 12px;
-  color: #2f2e2e;
+  color: #2f2d2d;
+  font-weight: 500;
 }
 
 .content {
-  font-size: 14px;
-  color: #555;
+  font-size: 15px;
+  font-weight: 540;
+  color: #010f2a;
   margin: 15px 0;
   line-height: 1.5;
 }
