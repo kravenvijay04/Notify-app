@@ -1,16 +1,13 @@
-/* Container for the login box */
 #Signup-box {
     width: 350px;
-    padding: 30px;
-    padding-right: 50px;
-    background-color: #f5fdf5;
-    /* Soft green background */
+    padding: 15px;
+    padding-top: 10px;
+    padding-right: 40px;
+    background-color: #f5fdf59a;
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    /* Enhanced shadow */
     margin: 100px auto;
     margin-top: 90px;
-    /* Centered on the page */
     font-family: 'Arial', sans-serif;
     transition: box-shadow 0.3s ease-in-out;
     position: relative;
@@ -18,22 +15,22 @@
 
 #Signup-box:hover {
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
-    /* Shadow animation on hover */
-
 }
 
 #Signup-box h3 {
     font-size: 26px;
     margin-bottom: 25px;
-    color: #333;
+    color: #c07c49;
     text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-left: 10px;
 }
 
 .input {
-    width: 100%;
-    padding: 12px;
+    width: 90%;
+    padding: 10px;
+    margin-left: 17px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 6px;
@@ -43,60 +40,58 @@
 
 .input:focus {
     border-color: #68bab9;
-    /* Green border on focus */
     outline: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .Signup-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #68bab9;
-    /* Light green button */
-    color: #000;
-    border: none;
+    width: 80%;
+    padding: 10px;
+    background-color: #c07c49;
+    /* outline: 2px solid #68bab9; */
+    color: white;
+    border: 2px solid #c07c49;
     border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     text-align: center;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 40px;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease;
 }
 
 .Signup-btn:hover {
-    background-color: #5db0ae;
-    /* Darker green on hover */
-    transform: translateY(-3px);
-    /* Slight lift on hover */
+
+    background-color: rgba(255, 255, 255, 0);
+    color: #c07c49;
+    border: 2px solid #c07c49;
 }
 
 .Notreg {
     font-size: 14px;
     text-align: center;
-    color: #666;
+    color: #0f0e0e;
 }
 
 .Notreg a {
-    color: #000;
+    color: #3402ff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .Notreg a:hover {
-    color: #3c9c3c;
-    /* Green color on hover */
+    color: #0091ff;
     text-decoration: underline;
 }
+
 .info {
     color: red;
     font-size: 14px;
     margin-left: 5px;
 }
 
-/* Responsive design for mobile */
 @media (max-width: 480px) {
     #Signup-box {
         width: 90%;
