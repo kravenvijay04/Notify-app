@@ -109,6 +109,7 @@ const Home = () => {
 
   return (
     <>
+    <div className='back'>
       <Navbar userInfo={userInfo} />
       <div>
 
@@ -128,7 +129,7 @@ const Home = () => {
             ))}
           </div>
         ) : (
-          <EmptyCard/>
+          <EmptyCard />
         )}
       </div>
 
@@ -167,6 +168,7 @@ const Home = () => {
         message={showFlareMsg.message}
         onClose={handleCloseFlare}
       />
+    </div>
     </>
   );
 }
