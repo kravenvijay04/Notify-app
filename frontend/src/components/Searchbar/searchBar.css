@@ -2,11 +2,13 @@
 #box {
     display: flex;
     align-items: center;
-    background-color: #efefef; /* Light gray background */
+    background: rgba(255, 255, 255, 0.436);
+    box-shadow: 0 0px 5px rgba(0, 0, 0, .5);
     padding: 8px 12px;
     border-radius: 6px;
-    margin-left: 25px;
-    width: 20%; /* Adapts to the content size */
+    margin-left: -20px;
+    width: 20%;
+    /* Adapts to the content size */
 }
 
 /* Search input styling */
@@ -16,24 +18,29 @@
     outline: none;
     flex: 1;
     font-size: 14px;
-    padding-right: 8px; /* Space for icons */
+    padding-right: 8px;
+    /* Space for icons */
 }
 
 /* Clear icon styling */
 #close {
     color: gray;
     cursor: pointer;
-    margin-right: 8px; /* Space between icons */
+    margin-right: 8px;
+    /* Space between icons */
 }
 
 /* Search icon styling */
 #glass {
     color: gray;
     cursor: pointer;
-    font-size: 18px; /* Larger size for better visibility */
+    font-size: 18px;
+    /* Larger size for better visibility */
 }
 
 /* Hover effect for icons */
-#close:hover, #glass:hover {
-    color: #3498db; /* Change color on hover */
+#close:hover,
+#glass:hover {
+    color: #3498db;
+    /* Change color on hover */
 }
