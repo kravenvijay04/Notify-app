@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Login from './pages/Login/Login/'
 import SignUp from './pages/SignUp/SignUp/'
 import Home from './pages/Home/Home/'
+import "./style.css"
 
 const routes = (
   <Router>
@@ -19,8 +20,10 @@ const routes = (
 
 const App = () => {
   return (
-    <div>
-      {routes}
+    <div className='bg'>
+      <div>
+        {routes}
+      </div>
     </div>
   )
 }
