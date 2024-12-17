@@ -1,4 +1,3 @@
-
 #container {
     display: flex;
     align-items: flex-start;
@@ -8,9 +7,9 @@
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 30px;
     position: absolute;
-    left:9%;
+    left: 9%;
 }
 
 .note-card {
@@ -82,24 +81,26 @@
     color: #ffa500;
 }
 
-#add-icon{
+#add-icon {
     color: white;
     font-size: 55px;
 }
-.add {
+
+.add{
     border: none;
-    background-color: #50a4a2;
+    background: rgba(108, 169, 185, 0.459);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
     color: #fff;
-    padding: 10px ;
-    border-radius: 25px;
+    padding: 14px;
+    border-radius: 30px;
     position: fixed;
-    left: 92%;
-    top: 80%;
+    left: 90%;
+    top: 78%;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .add:hover {
-    background-color: #3a7e7c;
+    background-color: #78a9c0be;
     transform: scale(1.1);
 }
