@@ -1,9 +1,16 @@
 .emp {
-    width: 18%;
-    margin-left: 42%;
-    margin-top: 5%;
+    width: 10%;
+    margin-left: 45.5%;
+    margin-top: 10%;
 }
 
-.msg{
-   margin-left: 30%;
+.msg1{
+   margin-left: 38%;
+   font-family: 'Arial', sans-serif;
+   color: white;
 }
+.msg2{
+    margin-left: 41%;
+    font-family: 'Arial', sans-serif;
+    color: white;
+ }

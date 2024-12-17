@@ -5,7 +5,8 @@ const EmptyCard = () => {
     return (
         <div className='img_con'>
             <img src="../../images/empty.png" alt='empty' className='emp' />
-            <p className='msg'>Start creating your note! Click the <strong>Add</strong> button to note down your thoughts,ideas and reminders</p>
+            <p className='msg1'>Start creating your note! Click the <strong>Add</strong> button to note</p>
+            <p className='msg2'>down your thoughts,ideas and reminders</p>
         </div>
     )
 }
