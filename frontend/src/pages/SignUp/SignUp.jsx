@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar1 from '../../components/Navbar/Navbar1';
 import { Link } from "react-router-dom";
 import Password from "../../components/input/Password.jsx";
 import { validateEmail } from '../../utils/helper.js';
@@ -65,7 +65,7 @@ const SignUp = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar1 />
       <div id="Signup-box">
         <form onSubmit={handleSignup}>
           <h3>Sign Up</h3>
