@@ -8,6 +8,7 @@
     padding: 5.5px;
     border-radius: 2px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
 }
 
 #logout-btn:hover {
@@ -30,9 +31,9 @@
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.063);
     background-color: #da8645;
     color: white;
-    padding-right:12px;
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 12px;
     border-radius: 10px;
 }
@@ -41,4 +42,23 @@
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.063);
     background-color: #c07c49;
     color: white;
+}
+
+#pop-info {
+    color: black;
+    z-index: 1;
+    position: absolute;
+    top: 7.5%;
+    left: 83.5%;
+    background-color: white;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 13.5px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.856);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+#email {
+    color: blue;
 }
