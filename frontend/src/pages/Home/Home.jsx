@@ -36,13 +36,6 @@ const Home = () => {
     setOpenAddEditModal({ isShown: true, data: noteDetails, type: "edit" });
   };
 
-  // const showFlareMessage = (message, type) => {
-  //   setShowFlareMsg({
-  //     isShown: true,
-  //     message,
-  //     type
-  //   });
-  // };
 
   const handleCloseFlare = () => {
     setShowFlareMsg({
@@ -93,6 +86,21 @@ const Home = () => {
     }
   }
 
+  const updateIsPinned = async (noteData) => {
+    const noteId = noteData._id;
+    try {
+      const response = await axiosInstance.put("/update-note-pinned/" + noteId, {
+        "isPinned": !noteId.isPinned,
+      });
+
+      if (response.data && response.data.note) {
+        getAllNotes()
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   useEffect(() => {
     getAllNotes();
     getUserInfo();
@@ -109,66 +117,66 @@ const Home = () => {
 
   return (
     <>
-    <div className='back'>
-      <Navbar userInfo={userInfo} />
-      <div>
+      <div className='back'>
+        <Navbar userInfo={userInfo} />
+        <div>
 
-        {allNotes.length > 0 ? (
-          <div id="container">
-            {allNotes.map((item) => (
-              <NoteCard
-                key={item._id}
-                title={item.title}
-                date={item.createdOn}
-                content={item.content}
-                isPinned={item.isPinned}
-                onEdit={() => { handleEdit(item) }}
-                onDelete={() => { deleteNote(item) }}
-                onPinNote={() => { }}
-              />
-            ))}
-          </div>
-        ) : (
-          <EmptyCard />
-        )}
-      </div>
+          {allNotes.length > 0 ? (
+            <div id="container">
+              {allNotes.map((item) => (
+                <NoteCard
+                  key={item._id}
+                  title={item.title}
+                  date={item.createdOn}
+                  content={item.content}
+                  isPinned={item.isPinned}
+                  onEdit={() => { handleEdit(item) }}
+                  onDelete={() => { deleteNote(item) }}
+                  onPinNote={() => { updateIsPinned(item)}}
+                />
+              ))}
+            </div>
+          ) : (
+            <EmptyCard />
+          )}
+        </div>
 
-      <button className="add" onClick={handleOpenModal}>
-        <MdAdd id="add-icon" />
-      </button>
+        <button className="add" onClick={handleOpenModal}>
+          <MdAdd id="add-icon" />
+        </button>
 
-      <Modal
-        isOpen={openAddEditModal.isShown}
-        onRequestClose={handleCloseModal}
-        style={{
-          overlay: {
-            backgroundColor: "rgba(0, 0, 0, 0.5)" // Background color for overlay
-          },
-          content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            transform: 'translate(-50%, -50%)',
-            width: '400px', // Optional: set width for modal
-            padding: '20px', // Optional: set padding for modal content
-          },
-        }}
-        contentLabel="Add/Edit Note"
-      >
-        <Addedit
-          type={openAddEditModal.type}
-          noteData={openAddEditModal.data}
-          onClose={handleCloseModal} getAllNotes={getAllNotes}
+        <Modal
+          isOpen={openAddEditModal.isShown}
+          onRequestClose={handleCloseModal}
+          style={{
+            overlay: {
+              backgroundColor: "rgba(0, 0, 0, 0.5)" // Background color for overlay
+            },
+            content: {
+              top: '50%',
+              left: '50%',
+              right: 'auto',
+              bottom: 'auto',
+              transform: 'translate(-50%, -50%)',
+              width: '400px', // Optional: set width for modal
+              padding: '20px', // Optional: set padding for modal content
+            },
+          }}
+          contentLabel="Add/Edit Note"
+        >
+          <Addedit
+            type={openAddEditModal.type}
+            noteData={openAddEditModal.data}
+            onClose={handleCloseModal} getAllNotes={getAllNotes}
+          />
+        </Modal>
+
+        <Flare
+          usShown={showFlareMsg.isShown}
+          message={showFlareMsg.message}
+          onClose={handleCloseFlare}
         />
-      </Modal>
-
-      <Flare
-        usShown={showFlareMsg.isShown}
-        message={showFlareMsg.message}
-        onClose={handleCloseFlare}
-      />
-    </div>
+      </div>
     </>
   );
 }
