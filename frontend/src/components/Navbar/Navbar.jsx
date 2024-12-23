@@ -26,20 +26,22 @@ const Navbar = ({ userInfo }) => {
     };
 
     return (
-        <div className="navbar">
-            <div className='title'>
-                <img src="./images/logo.png" alt="notify logo" className='logo' />
-                <h1>Notify</h1>
-            </div>
+        <>
+            <div className="navbar">
+                <div className='title'>
+                    <img src="./images/logo.png" alt="notify logo" className='logo' />
+                    <h1>Notify</h1>
+                </div>
 
-            <SearchBar
-                value={searchQuery}
-                onChange={({ target }) => setSearchQuery(target.value)}
-                handleSearch={handleSearch}
-                onClearSearch={onClearSearch}
-            />
-            <ProfileInfo userInfo={userInfo} onlogout={onlogout} />
-        </div>
+                <SearchBar
+                    value={searchQuery}
+                    onChange={({ target }) => setSearchQuery(target.value)}
+                    handleSearch={handleSearch}
+                    onClearSearch={onClearSearch}
+                />
+                <ProfileInfo userInfo={userInfo} onlogout={onlogout} />
+            </div>
+        </>
     );
 };
 
