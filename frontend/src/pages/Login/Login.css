@@ -1,38 +1,35 @@
-
 #login-box {
     width: 350px;
-    padding: 30px;
-    padding-right: 50px;
-    background-color: #f5fdf5;
-  
+    padding: 15px;
+    padding-top: 10px;
+    padding-right: 35px;
+    background-color: #f5fdf58f;
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    
     margin: 100px auto;
     margin-top: 110px;
-    
     font-family: 'Arial', sans-serif;
     transition: box-shadow 0.3s ease-in-out;
 }
 
 #login-box:hover {
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
-    
-
 }
 
 #login-box h3 {
     font-size: 26px;
     margin-bottom: 25px;
-    color: #333;
+    color: #c07c49;
+    margin-left: 10px;
     text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.input {
-    width: 100%;
-    padding: 12px;
+.input1{
+    width: 90%;
+    padding: 10px;
+    margin-left: 17px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 6px;
@@ -42,33 +39,32 @@
 
 .input:focus {
     border-color: #68bab9;
-    
     outline: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .login-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #68bab9;
-    
-    color: #000;
-    border: none;
+    width: 80%;
+    padding: 10px;
+    background-color: #c07c49;
+    color: white;
+    border: 2px solid #c07c49;
     border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     text-align: center;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 45px;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease;
 }
 
 .login-btn:hover {
-    background-color: #5db0ae;
-   
+    background-color: rgba(255, 255, 255, 0.058);
+    color: #c07c49;
+
     transform: translateY(-3px);
-    
+
 }
 
 .Notreg {
@@ -86,7 +82,7 @@
 
 .Notreg a:hover {
     color: #3c9c3c;
-    
+
     text-decoration: underline;
 }
 
