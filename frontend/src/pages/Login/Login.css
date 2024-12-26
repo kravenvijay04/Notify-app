@@ -16,17 +16,17 @@
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-#login-box h3 {
+#login-box h2 {
     font-size: 26px;
     margin-bottom: 25px;
-    color: #c07c49;
+    color: #192d47;
     margin-left: 10px;
     text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.input1{
+.input1 {
     width: 90%;
     padding: 10px;
     margin-left: 17px;
@@ -37,10 +37,10 @@
     transition: border-color 0.3s ease-in-out;
 }
 
-.input:focus {
-    border-color: #68bab9;
+.input1:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
     outline: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .login-btn {
@@ -67,52 +67,55 @@
 
 }
 
-.Notreg {
+#Notreg {
     font-size: 14px;
     text-align: center;
-    color: #666;
+    color: black;
 }
 
-.Notreg a {
-    color: #000;
+#Notreg a {
+    color: blue;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.Notreg a:hover {
+#Notreg a:hover {
     color: #3c9c3c;
-
     text-decoration: underline;
 }
 
-.info {
+#info {
     color: red;
     font-size: 14px;
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) and (max-height: 940px) {
     #login-box {
-        width: 90%;
-        padding: 20px;
+        margin-top: 35%;
+        padding: 6px;
+        padding-top: 1%;
+        padding-bottom: 10%;
     }
 
-    #login-box h3 {
-        font-size: 22px;
+    .input1 {
+        margin-left: 10px;
+        width: 86%;
+        padding: 12px;
     }
 
-    .input {
-        font-size: 14px;
-        padding: 10px;
+    #login-box h2 {
+        font-size: 35px;
+        margin-left: -60%;
     }
 
-    .login-btn {
-        font-size: 14px;
-        padding: 10px;
+    #info {
+        font-size: 18px;
+        margin-left: 15px;
     }
 
-    .Notreg {
-        font-size: 13px;
+    #Notreg {
+        font-size: 16px;
     }
 }
