@@ -101,7 +101,7 @@
 
     .input1 {
         margin-left: 10px;
-        width: 86%;
+        width: 86.5%;
         padding: 12px;
     }
 
@@ -117,5 +117,8 @@
 
     #Notreg {
         font-size: 16px;
+    }
+    .login-btn{
+        margin-left: 35px;
     }
 }
