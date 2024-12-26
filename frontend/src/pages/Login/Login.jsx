@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../../components/Navbar/Navbar.jsx";
 import Password from "../../components/input/Password.jsx";
 import { validateEmail } from '../../utils/helper.js';
 import axiosInstance from '../../utils/axiosInstance.js';
+import Navbar1 from '../../components/Navbar/Navbar1.jsx';
 
 const LogIn = () => {
   const [email, setEmail] = useState("");
@@ -47,20 +47,19 @@ const LogIn = () => {
       else{
         setError("An unexpected error occured. Please try again");
       }
-
     }
   };
 
   return (
     <>
-      <Navbar />
+      <Navbar1 />
       <div id="login-box">
         <form onSubmit={handleLogin}>
-          <h3>Login</h3>
+          <h2>Login</h2>
           <input 
             type='text' 
             placeholder='Email' 
-            className='input' 
+            className='input1' 
             value={email}
             onChange={(e) => setEmail(e.target.value)} 
           />
@@ -68,9 +67,9 @@ const LogIn = () => {
             value={password} 
             onChange={(e) => setPassword(e.target.value)} 
           />
-          {error && <p className='info'>{error}</p>}
+          {error && <p id='info'>{error}</p>}
           <button type='submit' className='login-btn'>Login</button>
-          <p className='Notreg'>
+          <p id='Notreg'>
             Not registered yet?{" "} 
             <Link to="/signup">Create an Account</Link>
           </p>
