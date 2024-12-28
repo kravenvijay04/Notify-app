@@ -142,15 +142,18 @@ const Home = () => {
         </div>
 
         <button className="add" onClick={handleOpenModal}>
-          <MdAdd id="add-icon" />
+          <MdAdd className="add-icon" />
         </button>
 
+        
         <Modal
           isOpen={openAddEditModal.isShown}
           onRequestClose={handleCloseModal}
+          
           style={{
             overlay: {
-              backgroundColor: "rgba(0, 0, 0, 0.5)" // Background color for overlay
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              zIndex:'10'
             },
             content: {
               top: '50%',
@@ -158,7 +161,7 @@ const Home = () => {
               right: 'auto',
               bottom: 'auto',
               transform: 'translate(-50%, -50%)',
-              width: '400px', // Optional: set width for modal
+              width: '340px', // Optional: set width for modal
               padding: '20px', // Optional: set padding for modal content
             },
           }}
@@ -170,6 +173,7 @@ const Home = () => {
             onClose={handleCloseModal} getAllNotes={getAllNotes}
           />
         </Modal>
+
 
         <Flare
           usShown={showFlareMsg.isShown}
