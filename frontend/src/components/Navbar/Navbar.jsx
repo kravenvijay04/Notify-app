@@ -8,11 +8,11 @@ import SearchBar from '../Searchbar/searchBar';
 
 const Navbar = ({ userInfo }) => {
     const [searchQuery, setSearchQuery] = useState("");
-    const navigate = useNavigate(); // Call useNavigate as a function
+    const navigate = useNavigate(); 
 
     const onlogout = () => {
         localStorage.clear();
-        console.log("Logout clicked"); // Add this line to verify if it's triggered
+        console.log("Logout clicked"); 
         navigate("/login");
     };
 
