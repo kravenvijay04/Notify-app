@@ -1,10 +1,10 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_BACK_END, // Make sure Base_URL is set correctly in constant.js
+    baseURL: import.meta.env.VITE_BACK_END,
     timeout: 10000,
     headers: {
-        "Content-Type": "application/json", // Fixed the typo here
+        "Content-Type": "application/json",
     }
 });
 
