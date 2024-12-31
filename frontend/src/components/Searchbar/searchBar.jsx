@@ -3,7 +3,7 @@ import React from 'react'
 import "./searchBar.css"
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 import { IoMdClose } from 'react-icons/io'
-// eslint-disable-next-line react/prop-types
+// eslint-disable-next-line react/prop-types 
 const SearchBar = ({value,onChange,handleSearch,onClearSearch}) => {
   return (
     <div id='box'>
