@@ -7,7 +7,7 @@
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
     margin: 100px auto;
-    margin-top: 110px;
+    margin-top: 90px;
     font-family: 'Arial', sans-serif;
     transition: box-shadow 0.3s ease-in-out;
 }
@@ -67,6 +67,15 @@
 
 }
 
+#patent{
+
+    font-family: 'Arial', sans-serif;
+    color: rgb(234, 253, 255);
+    margin-left: 44.1%;
+    margin-top: 100px;
+    font-size: 16px;
+
+}
 #Notreg {
     font-size: 14px;
     text-align: center;
