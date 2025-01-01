@@ -7,6 +7,7 @@ import { validateEmail } from '../../utils/helper.js';
 import { useNavigate } from "react-router-dom";
 import "./signUp.css";
 import axiosInstance from '../../utils/axiosInstance.js';
+import Copyright from '../../components/copyright/Copyright.jsx';
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -95,6 +96,8 @@ const SignUp = () => {
           </p>
         </form>
       </div>
+      <Copyright/>
+      <p id='patent1'><strong>©</strong> Notify- Notes taking app</p>
     </>
   )
 }
