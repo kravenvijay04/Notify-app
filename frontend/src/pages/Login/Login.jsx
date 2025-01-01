@@ -6,6 +6,7 @@ import Password from "../../components/input/Password.jsx";
 import { validateEmail } from '../../utils/helper.js';
 import axiosInstance from '../../utils/axiosInstance.js';
 import Navbar1 from '../../components/Navbar/Navbar1.jsx';
+import Copyright from '../../components/copyright/Copyright.jsx';
 
 const LogIn = () => {
   const [email, setEmail] = useState("");
@@ -53,6 +54,7 @@ const LogIn = () => {
   return (
     <>
       <Navbar1 />
+      
       <div id="login-box">
         <form onSubmit={handleLogin}>
           <h2>Login</h2>
@@ -75,6 +77,9 @@ const LogIn = () => {
           </p>
         </form>
       </div>
+      <Copyright/>
+      <p id='patent'><strong>©</strong> Notify- Notes taking app</p>
+      
     </>
   );
 }
