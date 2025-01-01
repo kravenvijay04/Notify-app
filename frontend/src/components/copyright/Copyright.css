@@ -1,0 +1,17 @@
+.copy{
+    font-family: 'Arial', sans-serif;
+    color: white;
+    position: relative;
+}
+#upper{
+    display: flex;
+    gap: 40px;
+    margin-left: 44%;
+    margin-top: -35px;
+}
+.rounded{
+    width: 50px;
+    margin-left: 48.5%;
+    margin-top: -50px;
+    position: absolute;
+}
