@@ -7,10 +7,19 @@
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
     margin: 100px auto;
-    margin-top: 90px;
+    margin-top: 70px;
     font-family: 'Arial', sans-serif;
     transition: box-shadow 0.3s ease-in-out;
     position: relative;
+}
+#patent1{
+
+    font-family: 'Arial', sans-serif;
+    color: rgb(234, 253, 255);
+    margin-left: 44.1%;
+    margin-top: 55px;
+    font-size: 16px;
+
 }
 
 #Signup-box:hover {
