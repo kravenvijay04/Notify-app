@@ -54,7 +54,7 @@ const LogIn = () => {
   return (
     <>
       <Navbar1 />
-      
+      <div id='IDlog'>
       <div id="login-box">
         <form onSubmit={handleLogin}>
           <h2>Login</h2>
@@ -78,7 +78,8 @@ const LogIn = () => {
         </form>
       </div>
       <Copyright/>
-      <p id='patent'><strong>©</strong> Notify- Notes taking app</p>
+      <footer id='patent'><strong>©</strong> Notify- Notes taking app</footer>
+      </div>
       
     </>
   );
