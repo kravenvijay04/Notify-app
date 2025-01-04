@@ -12,6 +12,9 @@ const Navbar1 = () => {
                 <img src="./images/logo.png" alt="notify logo" className='logo' />
                 <h1>Notify</h1>
             </div>
+            <div>
+                <img src="./images/calendar.png" alt="calender" className='calender'/>
+            </div>
         </div>
     );
 };
