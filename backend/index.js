@@ -1,12 +1,11 @@
 require("dotenv").config();
 
-const config = require("./config.json");
 const mongoose = require("mongoose");
 
 const User = require("./models/user.model")
 const Note = require("./models/notes.model")
 
-mongoose.connect(config.connectString)
+mongoose.connect(process.env.MongoDB_URL)
     .then(() => console.log("MongoDB connected successfully"))
     .catch(err => console.error("MongoDB connection error:", err));
 
@@ -306,7 +305,6 @@ web.get("/search-notes/", authenticateToken, async (req, res) => {
         })
     }
 })
-
 
 web.listen(8000);
 
