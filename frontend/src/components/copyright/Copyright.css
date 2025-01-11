@@ -1,17 +1,16 @@
-.copy{
-    font-family: 'Arial', sans-serif;
-    color: white;
-    position: relative;
-}
-#upper{
-    display: flex;
-    gap: 40px;
-    margin-left: 44%;
-    margin-top: -35px;
-}
+
 .rounded{
     width: 50px;
     margin-left: 48.5%;
-    margin-top: -50px;
+    margin-top: -70px;
     position: absolute;
+}
+@media (max-width: 430px) and (max-height: 940px) {
+    #upper{
+        margin-left: 27%;
+    }
+    .rounded{
+        margin-left: 44.5%;
+    
+    }
 }
