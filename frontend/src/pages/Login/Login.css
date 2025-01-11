@@ -15,6 +15,28 @@
 #login-box:hover {
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
 }
+#details{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.github {
+    margin-left: 35px;
+    width: 8%;
+    border-radius: 25%;
+}
+
+.linkedin {
+    width: 8%;
+    border-radius: 3px;
+    margin-left: 110px;
+}
+
+.instagram {
+    width: 8%;
+    border-radius: 5px;
+    margin-left: 35px;
+}
 
 #login-box h2 {
     font-size: 26px;
@@ -66,10 +88,12 @@
     transform: translateY(-3px);
 
 }
-#IDlog{
- position: relative;
+
+#IDlog {
+    position: relative;
 }
-#patent{
+
+#patent {
     display: flex;
     box-sizing: border-box;
     position: fixed;
@@ -80,6 +104,7 @@
     font-size: 16px;
 
 }
+
 #Notreg {
     font-size: 14px;
     text-align: center;
@@ -131,10 +156,13 @@
     #Notreg {
         font-size: 16px;
     }
-    .login-btn{
+
+    .login-btn {
         margin-left: 35px;
     }
-    #patent{
+
+    #patent {
         left: 29%;
     }
+
 }
