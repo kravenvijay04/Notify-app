@@ -6,7 +6,7 @@
     box-shadow: 0 0px 5px rgba(0, 0, 0, .5);
     padding: 8px 12px;
     border-radius: 20px;
-    margin-left: -20px;
+    margin-left: 200px;
     width: 20%;
 }
 
@@ -23,15 +23,16 @@
 
 
 #close {
-    color: gray;
+    color: rgb(82, 80, 80);
     cursor: pointer;
     margin-right: 8px;
+    font-size: 20px;
     
 }
 
 
 #glass {
-    color: gray;
+    color: rgb(105, 102, 102);
     cursor: pointer;
     font-size: 18px;
     
@@ -52,5 +53,9 @@
     #glass{
         position: absolute;
         margin-left: 28%;
+    }
+    #close{
+        position: absolute;
+        margin-left: 22%;
     }
 }
