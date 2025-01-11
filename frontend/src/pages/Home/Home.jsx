@@ -30,12 +30,12 @@ const Home = () => {
   const [allNotes, setAllNotes] = useState([])
   const [userInfo, setUserInfo] = useState(null);
 
+  const [isSearch, setIsSearch] = useState(false);
   const navigate = useNavigate();
 
   const handleEdit = (noteDetails) => {
     setOpenAddEditModal({ isShown: true, data: noteDetails, type: "edit" });
   };
-
 
   const handleCloseFlare = () => {
     setShowFlareMsg({
@@ -101,6 +101,25 @@ const Home = () => {
     }
   }
 
+  const onSearchNote = async (query) => {
+    try {
+      const response = await axiosInstance.get("/search-notes", {
+        params: { query },
+      });
+      if (response.data && response.data.notes) {
+        setIsSearch(true);
+        setAllNotes(response.data.notes);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const handleClearSearch = () => {
+    setIsSearch(true);
+    getAllNotes();
+  }
+
   useEffect(() => {
     getAllNotes();
     getUserInfo();
@@ -118,7 +137,7 @@ const Home = () => {
   return (
     <>
       <div className='back'>
-        <Navbar userInfo={userInfo} />
+        <Navbar userInfo={userInfo} onSearchNote={onSearchNote} handleClearSearch={handleClearSearch} />
         <div>
 
           {allNotes.length > 0 ? (
@@ -132,7 +151,7 @@ const Home = () => {
                   isPinned={item.isPinned}
                   onEdit={() => { handleEdit(item) }}
                   onDelete={() => { deleteNote(item) }}
-                  onPinNote={() => { updateIsPinned(item)}}
+                  onPinNote={() => { updateIsPinned(item) }}
                 />
               ))}
             </div>
@@ -145,15 +164,15 @@ const Home = () => {
           <MdAdd className="add-icon" />
         </button>
 
-        
+
         <Modal
           isOpen={openAddEditModal.isShown}
           onRequestClose={handleCloseModal}
-          
+
           style={{
             overlay: {
               backgroundColor: "rgba(0, 0, 0, 0.6)",
-              zIndex:'10'
+              zIndex: '10'
             },
             content: {
               top: '50%',
