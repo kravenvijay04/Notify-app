@@ -1,7 +1,7 @@
 .note-card {
   background-color: #c7e5ed;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.436);
+  background: rgba(255, 255, 255, 0.523);
   box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
   padding: 20px;
   max-width: 350px;
@@ -87,4 +87,12 @@
 
 .icon-btn:hover {
   color: #000;
+}
+
+.onDisplay{
+  color: #304f8d;
+}
+
+.onDisplay:hover{
+  color: rgb(0, 0, 0);
 }
