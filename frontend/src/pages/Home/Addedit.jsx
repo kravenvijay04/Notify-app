@@ -27,6 +27,26 @@ const Addedit = ({ noteData, getAllNotes, type, onClose }) => {
     }
   }
 
+  const displayNote = async () => {
+
+    const noteId = noteData._id;
+    try {
+      const response = await axiosInstance.put("/display-note/" + noteId, {
+        title,
+        content,
+      });
+
+      if (response.data && response.data.note) {
+        getAllNotes()
+        onClose()
+      }
+    } catch (error) {
+      if (error.response && error.response.data && error.response.data.message) {
+        setError(error.response.data.message);
+      }
+    }
+  }
+
   const editNote = async () => {
 
     const noteId = noteData._id;
@@ -63,8 +83,11 @@ const Addedit = ({ noteData, getAllNotes, type, onClose }) => {
     if (type === 'edit') {
       editNote();
     }
-    else {
+    else if(type === 'add') {
       addNewNote();
+    }
+    else{
+      displayNote();
     }
   }
   return (
@@ -80,7 +103,7 @@ const Addedit = ({ noteData, getAllNotes, type, onClose }) => {
 
       {error && <p className='error_'>{error}</p>}
 
-      <button className='btn' onClick={handleAddNote}>{type === "edit" ? "UPDATE" : "ADD"}</button>
+      {type==="display"?'':<button className='btn' onClick={handleAddNote}>{type === "edit" ? "UPDATE" : "ADD"}</button>}
     </div>
   )
 }

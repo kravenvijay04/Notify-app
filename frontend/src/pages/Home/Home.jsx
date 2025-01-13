@@ -37,6 +37,10 @@ const Home = () => {
     setOpenAddEditModal({ isShown: true, data: noteDetails, type: "edit" });
   };
 
+  const handleDisplay = (noteDetails) => {
+    setOpenAddEditModal({ isShown: true, data: noteDetails, type: "display" });
+  };
+
   const handleCloseFlare = () => {
     setShowFlareMsg({
       isShown: false,
@@ -152,6 +156,7 @@ const Home = () => {
                   onEdit={() => { handleEdit(item) }}
                   onDelete={() => { deleteNote(item) }}
                   onPinNote={() => { updateIsPinned(item) }}
+                  onDisplay={()=>{ handleDisplay(item)}}
                 />
               ))}
             </div>
