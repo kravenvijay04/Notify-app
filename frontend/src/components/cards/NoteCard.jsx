@@ -1,11 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { MdOutlinePushPin, MdCreate, MdDelete } from 'react-icons/md';
+import { FaNoteSticky } from "react-icons/fa6";
 import "./NoteCard.css";
 import moment from "moment"
 
-
-const NoteCard = ({ title, content, date, isPinned, onEdit, onDelete, onPinNote }) => {
+const NoteCard = ({ title, content, date, isPinned, onEdit, onDelete, onPinNote ,onDisplay }) => {
   return (
     <div className='note-card'>
       <div className='header'>
@@ -20,10 +20,10 @@ const NoteCard = ({ title, content, date, isPinned, onEdit, onDelete, onPinNote 
       </div>
       <p className="content">{content.length > 39 ? `${content.substring(0, 35)}...` : content}</p>
 
-
       <div id='ons'>
         <MdCreate className='onCreate' onClick={onEdit} />
         <MdDelete className='onDelete' onClick={onDelete} />
+        <FaNoteSticky className='onDisplay' onClick={onDisplay}/>
       </div>
     </div>
   );
