@@ -198,6 +198,33 @@ web.put("/edit-note/:noteId", authenticateToken, async (req, res) => {
 
 })
 
+web.get("/display-note/:noteId", authenticateToken, async (req, res) => {
+    const noteId = req.params.noteId;
+    const { user } = req.user;
+
+    try {
+        const note = await Note.findOne({ _id: noteId, userId: user._id });
+
+        if (!note) {
+            return res.status(404).json({
+                error: true,
+                message: "Note not found",
+            });
+        }
+
+        return res.json({
+            error: false,
+            note,
+            message: "Note retrieved successfully",
+        });
+    } catch (error) {
+        return res.status(500).json({
+            error: true,
+            message: "Internal Server Error",
+        });
+    }
+});
+
 web.get("/get-all-notes", authenticateToken, async (req, res) => {
     const { user } = req.user;
 
