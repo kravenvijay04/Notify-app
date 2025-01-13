@@ -11,7 +11,6 @@ const SearchBar = ({value,onChange,handleSearch,onClearSearch}) => {
       {value && <IoMdClose id='close' onClick={onClearSearch}/>}
       <FaMagnifyingGlass id='glass' onClick={handleSearch}/>
     </div>
-    
   )
 }
 
