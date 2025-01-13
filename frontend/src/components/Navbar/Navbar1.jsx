@@ -5,7 +5,6 @@ import './Navbar1.css';
 
 const Navbar1 = () => {
 
-
     return (
         <div className="navbar1">
             <div className='title'>
@@ -13,7 +12,7 @@ const Navbar1 = () => {
                 <h1>Notify</h1>
             </div>
             <div>
-                <img src="./images/calendar.png" alt="calender" className='calender'/>
+                <img src="./images/peace.png" alt="help" className='help'/>
             </div>
         </div>
     );
