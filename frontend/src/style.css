@@ -1,0 +1,19 @@
+/* Apply background styles to the body */
+body {
+    background-image: url("./images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* Ensure it covers the entire height */
+}
+
+/* Ensure content takes full width */
+.container {
+    width: 100%;
+    padding-bottom: 2rem;
+    /* Add padding for better spacing */
+}
