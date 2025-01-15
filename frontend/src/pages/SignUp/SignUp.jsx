@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Password from "../../components/input/Password.jsx";
 import { validateEmail } from '../../utils/helper.js';
 import { useNavigate } from "react-router-dom";
-import "./signUp.css";
+import "./SignUp.css";
 import axiosInstance from '../../utils/axiosInstance.js';
 import Copyright from '../../components/copyright/Copyright.jsx';
 
