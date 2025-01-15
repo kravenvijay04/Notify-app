@@ -23,6 +23,13 @@ web.use(
         origin: "*",
     })
 );
+web.use(
+    cors({
+        origin: process.env.Application_URL,
+        methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+        credentials: true,
+    })
+);
 
 web.get("/", (req, res) => {
     res.json({
