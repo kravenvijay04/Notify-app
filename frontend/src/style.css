@@ -1,16 +1,24 @@
-body {
-    background-image: url("../images/bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+body, html {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/bg.jpg") no-repeat center center/cover;
+    z-index: -1; /* Ensures it's behind all content */
+}
+
+/* Ensure container spacing is properly managed */
 .container {
     width: 100%;
+    min-height: 100vh; /* Makes sure content is always at least full height */
     padding-bottom: 2rem;
-    /* Add padding for better spacing */
 }
