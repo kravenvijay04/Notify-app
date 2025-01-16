@@ -181,12 +181,12 @@ const Home = () => {
             },
             content: {
               top: '50%',
-              left: '50%',
+              left: '49.5%',
               right: 'auto',
               bottom: 'auto',
               transform: 'translate(-50%, -50%)',
-              width: '340px', // Optional: set width for modal
-              padding: '20px', // Optional: set padding for modal content
+              width: '320px', 
+              padding: '20px', 
             },
           }}
           contentLabel="Add/Edit Note"
