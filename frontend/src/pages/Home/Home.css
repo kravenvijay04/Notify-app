@@ -85,18 +85,19 @@
     font-size: 55px;
 }
 
-.add{
+.add {
     border: none;
     background: rgb(213, 123, 27);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 14px;
     border-radius: 30px;
-    position: fixed;
-    left: 90%;
-    top: 78%;
+    position: fixed;  
+    right: 5%;  
+    bottom: 5%; 
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; 
 }
 
 .add:hover {
@@ -111,8 +112,9 @@
         left: 3.5%;
         margin-top: 80px;
     }
-    .add{
-        margin-left: -19%;
-        margin-top: 40px;
+    .add {
+        right: 5%;
+        bottom: 5%; 
+        margin: 0;  
     }
 }
