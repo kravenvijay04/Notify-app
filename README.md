@@ -1,5 +1,5 @@
-<img src="frontend/public/images/icon.png" alt="Notify logo" width="60"/> 
-<h1>Notify-Notes taking app 📓❤️</h1>
+
+<h1> <img src="frontend/public/images/icon.png" alt="Notify logo" width="60"/> Notify-Notes taking app📓❤️</h1>
 <p align="center">
   <a href="https://www.npmjs.com/~yourprofile">
     <img src="https://img.shields.io/badge/npm-Profile-orange.svg" target="_blank" />
