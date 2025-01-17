@@ -1,4 +1,22 @@
-<img src="Hardware%20setup/block.png" alt="Hardware Setup Diagram" width="500"/> # Notify - Personal Schedule & Notes Manager
+<img src="frontend/public/images/icon.png" alt="Notify logo" width="60"/> 
+<h1>Notify-Notes taking app 📓❤️</h1>
+<p align="center">
+  <a href="https://www.npmjs.com/~yourprofile">
+    <img src="https://img.shields.io/badge/npm-Profile-orange.svg" target="_blank" />
+</a>
+<a href="https://nodejs.org/en/about/">
+    <img src="https://img.shields.io/badge/Node.js-Official-green.svg" target="_blank" />
+</a>
+<a href="https://expressjs.com/">
+    <img src="https://img.shields.io/badge/Express.js-Official-blue.svg" target="_blank" />
+</a>
+<a href="https://www.mongodb.com/">
+    <img src="https://img.shields.io/badge/MongoDB-Official-green.svg" target="_blank" />
+</a>
+<a href="https://reactjs.org/">
+    <img src="https://img.shields.io/badge/React.js-Official-blue.svg" target="_blank" />
+</a>
+</p>
 
 ## Overview
 Notify is a **MERN stack web application** designed to efficiently manage personal schedules and notes. It allows users to create, edit, and delete notes seamlessly, providing a user-friendly interface for effective task organization. 
@@ -59,9 +77,3 @@ npm start
 
 ## Contributing
 Contributions are welcome! Feel free to fork the repository and submit pull requests with improvements or new features.
-
-## License
-This project is open-source and available under the **MIT License**.
-
-## Contact
-For questions or collaborations, reach out at [your-email@example.com](vijaykumarnr04@gmail.com).
