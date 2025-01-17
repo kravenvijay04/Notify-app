@@ -1,4 +1,4 @@
-<h1> <img src="frontend/public/images/bg.jpg" alt="Notify logo" width="40"/>  <strong>Notify - Backend👨‍💻</strong></h1>
+<h1><strong>Notify - Backend👨‍💻</strong></h1>
   <p>This repository contains the backend code for the <strong>Notify App</strong>. The backend is built with Node.js, Express, MongoDB, and JWT authentication to handle user accounts and note management. Users can register, log in, and perform CRUD operations on notes.</p>
 
   <h2>Features</h2>
