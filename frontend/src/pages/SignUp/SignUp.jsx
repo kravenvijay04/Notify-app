@@ -95,11 +95,11 @@ const SignUp = () => {
             <Link to="/login">Login</Link>
           </p>
         </form>
-        <footer id='details'>
+        {/* <footer id='details'>
         <a href="https://www.linkedin.com/in/vijayakumar-nk-885172257/"><img className="linkedin" src="./images/linkedin.png" alt="linkedin"/></a>
         <a href="https://github.com/kravenvijay04"><img className="github" src="./images/github.png" alt="github" /></a>
         <a href="https://www.instagram.com/8196vijay/"><img className="instagram" src="./images/insta.png" alt="instagram" /></a>
-        </footer>
+        </footer> */}
       </div>
       <Copyright/>
       <p id='patent1'><strong>©</strong> Notify- Notes taking app</p>
