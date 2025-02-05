@@ -142,4 +142,4 @@ Application_URL=http://localhost:3000</code></pre>
     <li>Make your changes and commit them.</li>
     <li>Push your changes to your fork.</li>
     <li>Open a pull request to the <code>main</code> branch.</li>
-  </ol>
+  </ol> 
